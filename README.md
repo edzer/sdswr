@@ -42,7 +42,7 @@ to carry out programming tasks.
 
 The course will be organized along the following topics:
 
-1. R and the CRAN package ecosystem; other ecosystems: bioconductor, github
+1. R and the CRAN package ecosystem; other ecosystems: bioconductor, github; flavors of R, IDEs, rstudio
 2. R basics: vectors, arrays, lists, data.frames, factor, NA, subset
 3. R programming basics: functions, methods, creating generics, S3, S4, R6
 4. Writing packages: package organisation, writing R extensions, NAMESPACE, roxygen
@@ -50,20 +50,22 @@ The course will be organized along the following topics:
 6. R models, formula, lm, predict, plot, summary,
 7. R plotting: base plot, grid, lattice, ggplot
 8. Tidyverse: tidy data, tidy tools manifesto, dplyr, pipes
-9. Extending R: C, C++, Fortran, Java, JavaScript, 
-10. Time in R: POSIXlt, POSIXct, zoo, xts
+9. Extending R: C, C++, Fortran, Java, JavaScript; interfaces to external libraries 
+10. Time and time series data in R: Date, POSIXlt, POSIXct, zoo, xts
 11. Spatial and spatiotemporal packages: sp, spacetime, raster, sf
 12. Programming challenges
  
 
 ### References
 
-* John Chambers, 2016. Extending R. CRC Press.
+* [JC] John Chambers, 2016. Extending R. CRC Press.
 
-* Hadley Wickham, Advanced R. http://adv-r.had.co.nz/
+* [AR] Hadley Wickham, Advanced R. http://adv-r.had.co.nz/
 
-* Hadley Wickham, R Packages. http://r-pkgs.had.co.nz/
+* [RP] Hadley Wickham, R Packages. http://r-pkgs.had.co.nz/
 
-* Hadley Wickham and Gareth Grolemund, R for Data Science, http://r4ds.had.co.nz/
+* [RDS] Hadley Wickham and Gareth Grolemund, R for Data Science, http://r4ds.had.co.nz/
 
-* Roger Bivand, Edzer Pebesma, Virgilio Gomez-Rubio, Applied Spatial Data Analysis with R. Springer, NY.; http://www.asdar-book.org/
+* [ASDAR] Roger Bivand, Edzer Pebesma, Virgilio Gomez-Rubio, Applied Spatial Data Analysis with R. Springer, NY.; http://www.asdar-book.org/
+
+* [IR] R Core Team, 2017, [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)
