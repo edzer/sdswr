@@ -42,7 +42,7 @@ to carry out programming tasks.
 
 The course will be organized along the following topics:
 
-1. R and its package ecosystem; CRAN; other ecosystems: bioconductor, github; flavors of R, IDEs, rstudio
+1. R and its package ecosystem; CRAN; other ecosystems: bioconductor, github; flavors of R, IDEs, rstudio [questions](meeting1.md)
 2. R basics: vectors, arrays, lists, `NULL`, data.frames, factor, `NA`, subset
 3. R programming basics: functions, methods, creating generics, S3, S4, R6
 4. Writing packages: package organisation, writing R extensions, NAMESPACE, roxygen
