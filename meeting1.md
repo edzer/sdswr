@@ -9,10 +9,12 @@
 1. what are IDE's for R?
 1. how does R work?
 1. what is a REPL?
+1. is R a language?
 1. is R a compiled language?
 1. is R slow?
 1. who write R?
 1. why isn't R on github?
 1. how many implemenations are there for R?
-1. how many interfaces are there for R?
+1. how many user interfaces are there for R?
 1. how do I learn R?
+1. should I learn R packages _before_ learning R?
