@@ -46,9 +46,9 @@ The course will be organized along the following topics:
 3. (Apr 23) R models, formula, lm, predict, plot, summary, subset, NA, factor
 4. (Apr 30) R spatial basics: history, packages, sys reqs, simple features
 5. (May 7) Vector geometric operations, DE-9-IM
-6. (May 14) Raster, vector-raster conversion, arrays 
-7. (May 28) Attributes, attribute-to-geometry relations
-8. (Jun 4) R plotting: base plot, grid, lattice, ggplot
+6. (May 14) Attributes, attribute-to-geometry relations
+7. (May 28) Raster, vector-raster conversion, arrays 
+8. (Jun 4) R plotting: base plot, grid, lattice, ggplot2
 9. (Jun 11) (no lecture)
 10. (Jun 18) Tidyverse basics: tidy data, tidy tools manifesto, dplyr, pipes 
 11. (Jun 25) R programming: functions, methods, S3, S4, R6
