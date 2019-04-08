@@ -41,20 +41,19 @@ to carry out programming tasks.
 
 The course will be organized along the following topics:
 
-1. (Apr 9) R and its package ecosystem; CRAN; other ecosystems: bioconductor, github; flavors of R, IDEs, rstudio [questions](meeting1.md)
-2. (Apr 16) R basics: objects, vectors, arrays, lists, `NULL`, attributes; data.frames
-3. (Apr 23) R models, formula, lm, predict, plot, summary, subset, NA, factor
-4. (Apr 30) R spatial basics: history, packages, sys reqs, simple features
-5. (May 7) Vector geometric operations, DE-9-IM
-6. (May 14) Attributes, attribute-to-geometry relations
-7. (May 28) Raster, vector-raster conversion, arrays 
-8. (Jun 4) R plotting: base plot, grid, lattice, ggplot2
-9. (Jun 11) (no lecture)
-10. (Jun 18) Tidyverse basics: tidy data, tidy tools manifesto, dplyr, pipes 
-11. (Jun 25) R programming: functions, methods, S3, S4, R6
-12. (Jul 2) R looping: for, apply, lapply, purr
-13. (Jul 9) Extending R: foreign language interfaces
-14. (Jul 16) R markdown; Writing R packages
+1. (Apr 8) R and its package ecosystem; CRAN; other ecosystems: bioconductor, github; flavors of R, IDEs, rstudio [questions](meeting1.md)
+2. (Apr 15) R basics: objects, vectors, arrays, lists, `NULL`, attributes; data.frames
+3. (Apr 22) (no class) (Apr 25) (no class) 
+4. (Apr 29) R models, formula, lm, predict, plot, summary, subset, NA, factor
+5. (May 3) R spatial basics: history, packages, sys reqs, simple features
+6. (May 6) Vector geometric operations, DE-9-IM
+7. (May 13) Attributes, attribute-to-geometry relations
+8. (May 20) Raster, vector-raster conversion, arrays 
+9. (May 27) R plotting: base plot, grid, lattice, ggplot2
+10. (Jun 3) Tidyverse basics: tidy data, tidy tools manifesto, dplyr, pipes 
+11. (Jun 17) R programming: functions, methods, S3, S4, R6
+12. (Jun 24) R looping: for, apply, lapply, purr
+13. (Jul 1) Extending R: foreign language interfaces; R markdown; Writing R packages
 
 ### References
 
