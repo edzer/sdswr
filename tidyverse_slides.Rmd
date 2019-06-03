@@ -1,0 +1,128 @@
+---
+title: "tidyverse_slides"
+author: "Edzer Pebesma"
+date: "6/3/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Tidyverse
+
+What is tidyverse? It's a word play, a contraction of [tidy data](https://www.jstatsoft.org/article/view/v059i10) and the
+_Hadleyverse_, a universe of packages created by Hadley Wickham. (The word _tidyverse_ was chosen by Hadley)
+
+Tidy also refers to the [tidy tools manifesto](https://cran.r-project.org/web/packages/tidyverse/vignettes/manifesto.html), a vignette in the _tidyverse_ package. 
+Quoting: "There are four basic principles to a tidy API:
+
+1.  Reuse existing data structures.
+1. Compose simple functions with the pipe.
+1.  Embrace functional programming.
+1. Design for humans."
+
+Tidyverse is also a meta-package, a package that loads a lot of other packages:
+```{r}
+library(tidyverse)
+```
+If you worry about dependencies, you should never write a package that depends on a metapackage:
+```{r}
+devtools::session_info()
+```
+
+## `tibble`
+
+A `tibble` is an evolution of the `data.frame`:
+```{r}
+(tb = tibble(a = 3))
+```
+It "is" a `data.frame`,
+```{r}
+inherits(tb, "data.frame")
+```
+but behaves differently
+```{r}
+tb[,"a"] # defaults to drop = FALSE
+as.data.frame(tb)[, "a"] # drop = TRUE
+```
+Most people will agree that tibbles and `data.frame`s are different, many will say the difference is not very important.
+Some people (like me) will say it's useful to understand the difference.
+
+## `readr`
+
+Tidyverse tries to consistently use `_` in function names.
+
+Type `read_` and pres `TAB` twice, to see the list of `readr` functions starting with `read_`:
+```
+read_csv                read_delim_chunked      read_lines_chunked      read_table
+read_csv_chunked        read_file               read_lines_raw          read_table2
+read_csv2               read_file_raw           read_lines_raw_chunked  read_tsv
+read_csv2_chunked       read_fwf                read_log                read_tsv_chunked
+read_delim              read_lines              read_rds    
+```
+
+These functions may all have their reasons to be prefered over there `read.xxx` counterpart in base R. One thing to be aware of is that they all read character data as `character` vectors, where (by default) `read.csv` and `read.table` etc. read character data into `factor` variables, unless you set (globally -- never do this! --, or at the start of your script -- better! --)
+```{r}
+options(stringsAsFactors = FALSE)
+```
+Also, all these functions will return `tibble`s, rather than `data.frame`s.
+
+## `dplyr`
+
+The work horse of the tidyverse. Key commands:
+
+1. `filter` selects records
+2. `select` selects variables
+3. `mutate` adds/changes variables
+4. `left_join`, `inner_join`, `full_join` etc
+5. `group_by` creates a _grouped_ tibble
+6. `summarise` summarises variables, by group if grouped
+
+```{r}
+library(units)
+(lkm = set_units(1, miles/gallon) %>% set_units(l/km))
+mtcars %>%
+  filter(cyl <= 8)	%>%
+	mutate(usage = mpg * lkm) %>%
+  group_by(cyl) %>%
+	summarize(mean(usage), mean(mpg))
+```
+
+## `dbplyr`: database connectivity
+
+The number one killer reason to use tidyverse, and maybe even to use R rather than Python. 
+
+1. develop your workflow on a small table, using `dplyr`
+2. open a proxy object to a database in `dbplyr`
+3. run the same workflow/script against that object
+4. voila. Everything is done _inside_ the database.
+
+DBI/Spark/Cloudera/BigQuery/...
+
+## `tidyr`
+
+Reshapes tables: we saw the need for `gather` (opposit of `spread`) when plotting multiple attributes with `geom_sf`.
+These commands will be renamed into `pivot_long` and `pivot_wide` in the future.
+
+Other activities: `nest`, and `unnest` to nest tibbles (have a tibble as a record in a list-column). Example: tidy storm [trajectories](https://www.r-spatial.org/r/2017/08/28/nest.html)
+
+## `stringr`
+
+Helps with handling string (`character`) data. (Another package, `stringi`, does that too.)
+
+## `forcats`
+
+Helps with the handling of `factors`.
+
+## `purrr`
+
+functional programming: alternatives to `lapply`, `sapply`, `vapply`, `apply` and so on. We will talk about functional programming.
+
+## Other packages
+
+Many packages work along / well with `tidyverse`. One of them is `sf`:
+```{r}
+library(sf)
+methods(class = 'sf')
+```

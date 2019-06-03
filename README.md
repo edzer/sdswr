@@ -1,4 +1,4 @@
-# Spatial Data Science with R, MSc course, 2018
+# Spatial Data Science with R, MSc course, 2019
 
 ### Goals
 
