@@ -51,9 +51,9 @@ The course will be organized along the following topics:
 8. (May 20) Raster, vector-raster conversion, arrays 
 9. (May 27) R plotting: base plot, grid, lattice, ggplot2
 10. (Jun 3) Tidyverse basics: tidy data, tidy tools manifesto, dplyr, pipes 
-11. (Jun 17) R programming: functions, methods, S3, S4, R6
-12. (Jun 24) R looping: for, apply, lapply, purr
-13. (Jul 1) Extending R: foreign language interfaces; R markdown; Writing R packages
+11. (Jun 17)  R packages; functions, methods, S3, S4, R6
+12. (Jun 24) R looping: for, apply, lapply, purrr
+13. (Jul 1) Extending R: foreign language interfaces; R markdown;
 
 ### References
 
